@@ -1,5 +1,5 @@
 /**
- * A sample class to demonstrate the Furnished theme.
+ * A sample class to demonstrate the Fresh theme.
  * This is just an example for testing the theme during development.
  */
 export class Calculator {
@@ -42,7 +42,10 @@ export class Calculator {
  * @param currency - The currency code (default: "USD")
  * @returns A formatted currency string
  */
-export function formatCurrency(amount: number, currency: string = "USD"): string {
+export function formatCurrency(
+  amount: number,
+  currency: string = "USD"
+): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency,

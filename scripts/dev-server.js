@@ -1,4 +1,4 @@
-// Development server for the Furnished theme.
+// Development server for Fresh theme.
 // Watches for changes in the source files and rebuilds the theme and example docs.
 
 import { spawn } from "node:child_process";
@@ -6,7 +6,7 @@ import chokidar from "chokidar";
 import handler from "serve-handler";
 import http from "node:http";
 
-console.log("🔧 Starting Furnished theme development server...\n");
+console.log("🔧 Starting Fresh theme development server...\n");
 
 const port = process.env.PORT || 8888;
 

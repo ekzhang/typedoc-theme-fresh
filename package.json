@@ -1,5 +1,5 @@
 {
-  "name": "typedoc-theme-furnished",
+  "name": "typedoc-theme-fresh",
   "version": "0.1.0",
   "description": "A clean, minimalist and well-designed theme for TypeDoc",
   "type": "module",
@@ -22,7 +22,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "dev": "node scripts/dev-server.js",
-    "example": "typedoc --plugin ./dist/index.js --theme furnished --out docs-example --tsconfig example/tsconfig.json example/src/index.ts",
+    "example": "typedoc --plugin ./dist/index.js --theme fresh --out docs-example --tsconfig example/tsconfig.json example/src/index.ts",
     "clean": "rm -rf dist docs-example"
   },
   "peerDependencies": {

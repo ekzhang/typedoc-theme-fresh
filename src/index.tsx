@@ -10,11 +10,11 @@ import {
 } from "typedoc";
 
 /**
- * Custom theme render context for the Furnished theme.
+ * Custom theme render context for the Fresh theme.
  * Extends the default TypeDoc render context with custom styling and layout.
  */
-class FurnishedRenderContext extends DefaultThemeRenderContext {
-  constructor(theme: Furnished, page: PageEvent<Reflection>) {
+class FreshRenderContext extends DefaultThemeRenderContext {
+  constructor(theme: Fresh, page: PageEvent<Reflection>) {
     super(theme.router, theme, page, theme.application.options);
   }
 
@@ -92,7 +92,7 @@ class FurnishedRenderContext extends DefaultThemeRenderContext {
 
 // TODO: Maybe move this into a separate CSS file and set up a non-tsc bundler.
 const styles = `
-/* typedoc-theme-furnished */
+/* typedoc-theme-fresh */
 
 :root {
   --light-color-background: #fafafe;
@@ -135,11 +135,11 @@ const styles = `
 `;
 
 /**
- * Furnished theme for TypeDoc.
+ * Fresh theme for TypeDoc.
  *
  * A clean, minimalist and well-designed theme.
  */
-export class Furnished extends DefaultTheme {
+export class Fresh extends DefaultTheme {
   constructor(renderer: Renderer) {
     super(renderer);
     renderer.hooks.on("head.end", () => {
@@ -160,7 +160,7 @@ export class Furnished extends DefaultTheme {
   override getRenderContext(
     pageEvent: PageEvent<Reflection>
   ): DefaultThemeRenderContext {
-    return new FurnishedRenderContext(this, pageEvent);
+    return new FreshRenderContext(this, pageEvent);
   }
 }
 
@@ -168,5 +168,5 @@ export class Furnished extends DefaultTheme {
  * Called by TypeDoc when loading this theme as a plugin.
  */
 export function load(app: Application) {
-  app.renderer.defineTheme("furnished", Furnished);
+  app.renderer.defineTheme("Fresh", Fresh);
 }
