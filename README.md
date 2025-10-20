@@ -1,6 +1,6 @@
 # typedoc-theme-fresh
 
-_Fresh_ is a clean, minimalist and well-designed theme for [TypeDoc](https://typedoc.org/).
+_Fresh_ is a clean, minimalist and simple theme for [TypeDoc](https://typedoc.org/).
 
 I wrote this because the default TypeDoc theme is a bit noisy, and the layout seems a bit haphazard in places. This theme is meant to improve:
 

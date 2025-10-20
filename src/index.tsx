@@ -53,8 +53,28 @@ class FreshRenderContext extends DefaultThemeRenderContext {
             id="tsd-search-trigger"
             class="tsd-widget"
             aria-label={i18n.theme_search()}
+            style="
+              border: 1px solid var(--color-background-active);
+              border-radius: 4px;
+            "
           >
-            {this.icons.search()}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search-icon lucide-search"
+              style="margin-bottom: 1px; margin-left: 4px; margin-right: 8px;"
+            >
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+            <span style="margin-right: 12ch;">Search…</span>
           </button>
           <dialog id="tsd-search" aria-label={i18n.theme_search()}>
             <input
@@ -75,7 +95,7 @@ class FreshRenderContext extends DefaultThemeRenderContext {
               <div>{i18n.theme_preparing_search_index()}</div>
             </div>
           </dialog>
-          <a
+          {/* <a
             href="#"
             class="tsd-widget menu"
             id="tsd-toolbar-menu-trigger"
@@ -83,7 +103,7 @@ class FreshRenderContext extends DefaultThemeRenderContext {
             aria-label={i18n.theme_menu()}
           >
             {this.icons.menu()}
-          </a>
+          </a> */}
         </div>
       </header>
     );
@@ -96,8 +116,10 @@ const styles = `
 
 :root {
   --light-color-background: #fafafe;
+  --light-color-background-active: #e6e8ea;
   --light-color-text: #222222;
   --dark-color-background: #18181a;
+  --dark-color-background-active: #4d4d4a;
   --dark-color-text: #dfdfd6;
 }
 
@@ -129,7 +151,33 @@ const styles = `
   }
 
   .tsd-small-nested-navigation {
-    /* */
+    margin-left: 8px;
+  }
+}
+
+.tsd-widget {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: var(--color-background-active);
+  }
+}
+
+#tsd-search-results {
+  & > li {
+    padding-inline: 6px;
+    transition: background-color 200ms;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 }
 `;
@@ -168,5 +216,5 @@ export class Fresh extends DefaultTheme {
  * Called by TypeDoc when loading this theme as a plugin.
  */
 export function load(app: Application) {
-  app.renderer.defineTheme("Fresh", Fresh);
+  app.renderer.defineTheme("fresh", Fresh);
 }
