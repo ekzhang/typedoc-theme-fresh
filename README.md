@@ -2,14 +2,14 @@
 
 [![Demo website](https://i.imgur.com/sRKvsaZ.png)](https://www.ekzhang.com/typedoc-theme-fresh/)
 
-_Fresh_ is a clean, minimalist and simple theme for [TypeDoc](https://typedoc.org/).
+_Fresh_ is a clean and minimalist theme for [TypeDoc](https://typedoc.org/).
 
-I wrote this because the default TypeDoc theme is a bit noisy visually, and the layout seems haphazard in spots. This theme helps readers _focus on content_ by adjusting:
+The default TypeDoc theme is a bit noisy visually, and the layout seems haphazard in spots. This theme is intended to help _put content first_ and adjusts:
 
 - Color palette
 - Icon set and UI coherence
 - Typographic size and spacing
-- Visual consistency (borders, backgrounds, text decorations)
+- Visual consistency (borders, backgrounds, underlines)
 
 You can also use it as a base upon which to build your own themes.
 
@@ -38,4 +38,4 @@ This will listen for changes and automatically rebuild docs for the `example/` p
 
 ## License
 
-Authored by [Eric Zhang](https://www.ekzhang.com/) and released under the [MIT license](LICENSE).
+By [Eric Zhang](https://www.ekzhang.com/), released under the [MIT license](LICENSE).
