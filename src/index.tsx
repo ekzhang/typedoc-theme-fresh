@@ -275,7 +275,7 @@ const styles = `
 
 :root {
   --light-color-background: #fafafe;
-  --light-color-background-active: #e6e8ea;
+  --light-color-background-active: #eaeced;
   --light-color-text: #222222;
   --light-color-text-aside: #5e5e5e;
 
@@ -391,6 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: background-color 200ms;
   color: var(--color-text-aside);
+  opacity: 100%;
 
   &:hover {
     background-color: var(--color-background-active);
