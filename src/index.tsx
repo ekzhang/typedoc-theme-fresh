@@ -474,6 +474,15 @@ body {
   padding-block: 4px;
 }
 
+.tsd-page-navigation-section {
+  & > summary > svg {
+    margin-right: 0;
+  }
+  & > div {
+    margin-left: 24px;
+  }
+}
+
 .tsd-page-title {
   color: var(--color-contrast-text);
 }
@@ -512,6 +521,20 @@ code.tsd-tag {
 .tsd-anchor-icon {
   color: var(--color-text-aside);
   padding-bottom: 1px;
+}
+
+/* Accordion icon */
+.tsd-accordion-summary > svg {
+  color: var(--color-text-aside);
+  opacity: 50%;
+  stroke-width: 1px;
+}
+
+/* Desktop sizing */
+@media (min-width: 1200px) {
+  .container-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 18rem);
+  }
 }
 
 /* Tablet sizing */
