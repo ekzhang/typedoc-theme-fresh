@@ -1,3 +1,5 @@
+export * as foo from "./foo";
+
 /**
  * A sample class to demonstrate the Fresh theme.
  * This is just an example for testing the theme during development.

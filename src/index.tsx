@@ -49,6 +49,18 @@ class FreshRenderContext extends DefaultThemeRenderContext {
               )
             )}
           </div>
+
+          <div class="tsd-theme-toggle">
+            {/* <label class="settings-label" for="tsd-theme">
+              {i18n.theme_theme()}
+            </label> */}
+            <select id="tsd-theme">
+              <option value="os">{i18n.theme_os()}</option>
+              <option value="light">{i18n.theme_light()}</option>
+              <option value="dark">{i18n.theme_dark()}</option>
+            </select>
+          </div>
+
           <button
             id="tsd-search-trigger"
             class="tsd-widget"
@@ -119,8 +131,32 @@ const styles = `
   --light-color-background-active: #e6e8ea;
   --light-color-text: #222222;
   --dark-color-background: #18181a;
-  --dark-color-background-active: #4d4d4a;
+  --dark-color-background-active: #2d2d2a;
   --dark-color-text: #dfdfd6;
+}
+
+@media (prefers-color-scheme: light) {
+  ::selection {
+    background-color: #11111a20;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #bbbbff48;
+  }
+}
+
+:root[data-theme="light"] {
+  ::selection {
+    background-color: #11111a20;
+  }
+}
+
+:root[data-theme="dark"] {
+  ::selection {
+    background-color: #bbbbff48;
+  }
 }
 
 .tsd-page-toolbar {
@@ -133,6 +169,23 @@ const styles = `
     &:hover {
       color: var(--color-contrast-text);
       text-decoration: none;
+    }
+  }
+
+  .tsd-theme-toggle {
+    display: flex;
+    margin-right: 8px;
+    
+    select {
+      border: 1px solid var(--color-background-active);
+      border-radius: 4px;
+      padding: 6px 4px;
+      background: transparent;
+      transition: background-color 200ms;
+      
+      &:hover {
+        background-color: var(--color-background-active);
+      }
     }
   }
 }
