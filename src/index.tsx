@@ -284,10 +284,12 @@ body {
 
 .tsd-breadcrumb {
   margin-bottom: 12px;
-}
-
-.tsd-breadcrumb li:after {
-  content: " › ";
+  li:after {
+    content: " › ";
+  }
+  li:last-of-type::after {
+    content: "";
+  }
 }
 
 .tsd-signature,
