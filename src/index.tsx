@@ -488,10 +488,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-contrast-text);
 }
 
+h1 > code.tsd-tag {
+  margin-left: 12px;
+}
+
 code.tsd-tag {
   display: inline-block;
   transform: translateY(-0.1em);
-  margin-left: 12px;
   background: var(--color-background-secondary);
   border: 0;
   border-radius: 8px;
@@ -523,6 +526,10 @@ code.tsd-tag {
   padding-bottom: 1px;
 }
 
+.tsd-kind-icon {
+  filter: grayscale(0.5) opacity(0.8);
+}
+
 /* Accordion icon */
 .tsd-accordion-summary > svg {
   color: var(--color-text-aside);
@@ -539,7 +546,15 @@ code.tsd-tag {
 /* Desktop sizing */
 @media (min-width: 1200px) {
   .container-main {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 18rem);
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 2.5fr) minmax(0, 17rem);
+  }
+
+  .site-menu {
+    padding-right: 8px;
+  }
+
+  .page-menu {
+    padding-left: 24px;
   }
 }
 
