@@ -330,6 +330,10 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
 .tsd-page-toolbar {
   background-color: transparent;
   border-bottom: none;
@@ -457,14 +461,11 @@ body {
     margin-block: 16px;
     font-size: 18px;
     background: transparent !important;
+    padding: 0;
     
     &:hover {
       color: var(--color-contrast-text);
     }
-  }
-
-  .tsd-small-nested-navigation {
-    /* margin-left: 8px; */
   }
 }
 
@@ -489,8 +490,7 @@ body {
 
 code.tsd-tag {
   display: inline-block;
-  transform: translateY(-2px);
-  font-size: 60%;
+  transform: translateY(-0.1em);
   margin-left: 12px;
   background: var(--color-background-secondary);
   border: 0;
