@@ -209,6 +209,7 @@ class FreshRenderContext extends DefaultThemeRenderContext {
             style="
               border: 1px solid var(--color-background-active);
               border-radius: 4px;
+              margin-left: 8px;
             "
           >
             <svg
@@ -250,15 +251,36 @@ class FreshRenderContext extends DefaultThemeRenderContext {
               <div>{i18n.theme_preparing_search_index()}</div>
             </div>
           </dialog>
-          {/* <a
+          <a
             href="#"
             class="tsd-widget menu"
             id="tsd-toolbar-menu-trigger"
             data-toggle="menu"
             aria-label={i18n.theme_menu()}
+            style="
+              border: 1px solid var(--color-background-active);
+              border-radius: 4px;
+              margin-left: 4px;
+            "
           >
-            {this.icons.menu()}
-          </a> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu"
+              style="margin-left: 4px; margin-right: 4px;"
+            >
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+          </a>
         </div>
       </header>
     );
@@ -295,6 +317,7 @@ body {
   & > .container.container-main {
     margin: 0 auto;
     margin-top: var(--dim-header-height);
+    overflow: hidden;
     --dim-container-main-margin-y: 0px;
   }
 }
@@ -505,6 +528,7 @@ code.tsd-tag {
   margin-bottom: 12px;
   li:after {
     content: " › ";
+    opacity: 0.4;
   }
   li:last-of-type::after {
     content: "";
@@ -552,9 +576,12 @@ code.tsd-tag {
   .site-menu {
     padding-right: 8px;
   }
-
   .page-menu {
     padding-left: 24px;
+  }
+
+  .tsd-widget.menu {
+    display: none;
   }
 }
 
@@ -568,6 +595,10 @@ code.tsd-tag {
     margin-top: 0;
   }
 
+  .tsd-widget.menu {
+    display: none;
+  }
+
   .lg-show {
     display: none !important;
   }
@@ -575,6 +606,22 @@ code.tsd-tag {
 
 /* Mobile sizing */
 @media (max-width: 769px) {
+  .page-menu {
+    display: none;
+  }
+  .site-menu {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .has-menu .col-sidebar {
+    padding: 0 1rem;
+    max-height: 100dvh;
+  }
+
   .lg-show {
     display: none !important;
   }
