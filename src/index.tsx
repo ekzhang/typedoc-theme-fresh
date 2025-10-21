@@ -293,7 +293,7 @@ const styles = `
 
 body {
   & > .container.container-main {
-    margin: 0;
+    margin: 0 auto;
     margin-top: var(--dim-header-height);
     --dim-container-main-margin-y: 0px;
   }
