@@ -83,7 +83,7 @@ console.log("🏗️  Running initial build...\n");
 build();
 
 // Watch for changes in the source directory
-const watcher = chokidar.watch("src", {
+const watcher = chokidar.watch(["src", "example", "README.md"], {
   persistent: true,
   ignoreInitial: true,
   awaitWriteFinish: {

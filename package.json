@@ -13,6 +13,8 @@
   },
   "keywords": [
     "typedoc",
+    "typedoc-plugin",
+    "typedoc-theme",
     "theme",
     "documentation"
   ],
