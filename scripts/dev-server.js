@@ -71,6 +71,7 @@ httpServer = http.createServer((request, response) => {
   return handler(request, response, {
     public: "docs-example",
     cleanUrls: false,
+    etag: true,
   });
 });
 
