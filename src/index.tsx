@@ -277,10 +277,12 @@ const styles = `
   --light-color-background: #fafafe;
   --light-color-background-active: #e6e8ea;
   --light-color-text: #222222;
+  --light-color-text-aside: #5e5e5e;
 
-  --dark-color-background: #18181a;
-  --dark-color-background-active: #2d2d2a;
+  --dark-color-background: #1a1a1c;
+  --dark-color-background-active: #2f2f2b;
   --dark-color-text: #dfdfd6;
+  --dark-color-text-aside: #b0b0b0;
 
   --dim-header-height: 2.5rem;
   --dim-footer-height: 0px;
@@ -398,17 +400,14 @@ body {
 
 .tsd-navigation,
 .tsd-page-navigation {
-  > * {
+  > details {
     margin-bottom: 8px;
-  }
-
-  li:not(:last-of-type) {
-    margin-bottom: 2px;
   }
 
   a {
     border-radius: 4px;
     padding-inline: 6px;
+    margin-bottom: 2px;
   }
   a:hover {
     text-decoration: none;
@@ -416,6 +415,9 @@ body {
   }
   a.current {
     background-color: var(--color-background-active);
+    span {
+      color: var(--color-contrast-text);
+    }
   }
 }
 
@@ -440,6 +442,10 @@ body {
   border-left: 1px solid var(--color-background-active);
   padding-left: 4px;
   padding-block: 4px;
+}
+
+.tsd-page-title {
+  color: var(--color-contrast-text);
 }
 
 .tsd-widget {
