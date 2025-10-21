@@ -146,6 +146,10 @@ class FreshRenderContext extends DefaultThemeRenderContext {
 const styles = `
 /* typedoc-theme-fresh */
 
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --light-color-background: #fafafe;
   --light-color-background-active: #e6e8ea;
@@ -165,6 +169,7 @@ body {
     margin: 0;
     padding-block: 24px;
     overflow: auto;
+    /* scroll-behavior: smooth; */
   }
 }
 
