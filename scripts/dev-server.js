@@ -52,7 +52,9 @@ async function build() {
   try {
     await runCommand("npm", ["run", "build"], "Building theme");
     await runCommand("npm", ["run", "example"], "Generating example docs");
-    console.log(`✨ Build complete! View at http://localhost:${port}\n`);
+    console.log(
+      `✨ Build complete! View at http://localhost:${port}/index.html\n`
+    );
   } catch (error) {
     console.error("Build failed:", error.message);
   } finally {
@@ -68,7 +70,7 @@ async function build() {
 httpServer = http.createServer((request, response) => {
   return handler(request, response, {
     public: "docs-example",
-    cleanUrls: true,
+    cleanUrls: false,
   });
 });
 

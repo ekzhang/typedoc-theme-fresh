@@ -155,6 +155,19 @@ const styles = `
   --dark-color-text: #dfdfd6;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+
+  & > .container.container-main {
+    flex-grow: 1;
+    margin: 0;
+    padding-block: 24px;
+    overflow: auto;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   ::selection {
     background-color: #11111a20;
@@ -233,7 +246,7 @@ const styles = `
   }
 
   .tsd-small-nested-navigation {
-    margin-left: 8px;
+    /* margin-left: 8px; */
   }
 }
 
@@ -262,6 +275,24 @@ const styles = `
   a:hover {
     text-decoration: none;
   }
+}
+
+.tsd-breadcrumb {
+  margin-bottom: 12px;
+}
+
+.tsd-breadcrumb li:after {
+  content: " › ";
+}
+
+.tsd-signature,
+.tsd-signatures .tsd-signature {
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-background-secondary);
+  font-weight: 500;
+  padding: 10px 8px;
+  line-height: 1.3;
 }
 `;
 
