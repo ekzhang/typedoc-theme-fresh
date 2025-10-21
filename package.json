@@ -24,7 +24,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "dev": "node scripts/dev-server.js",
-    "example": "typedoc --plugin ./dist/index.js --theme fresh --out docs-example --tsconfig example/tsconfig.json example/src/index.ts",
+    "example": "typedoc --plugin ./dist/index.js --theme fresh --out docs-example --readme example/README.md --tsconfig example/tsconfig.json example/src/index.ts",
     "clean": "rm -rf dist docs-example"
   },
   "peerDependencies": {
