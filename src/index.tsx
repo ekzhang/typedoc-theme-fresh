@@ -528,6 +528,12 @@ code.tsd-tag {
   color: var(--color-text-aside);
   opacity: 50%;
   stroke-width: 1px;
+  transition: transform 200ms ease-in-out;
+}
+
+.tsd-accordion-summary > svg:has(+ h2) {
+  height: 24px;
+  width: 24px;
 }
 
 /* Desktop sizing */
