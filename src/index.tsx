@@ -50,12 +50,32 @@ class FreshRenderContext extends DefaultThemeRenderContext {
             )}
           </div>
 
-          <div class="tsd-theme-toggle">
+          <div class="tsd-theme-toggle" style="position: relative">
             {/* <label class="settings-label" for="tsd-theme">
               {i18n.theme_theme()}
             </label> */}
+            <div style="position: absolute; left: 8px; top: 4px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-sun-moon-icon lucide-sun-moon"
+              >
+                <path d="M12 2v2" />
+                <path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715" />
+                <path d="M16 12a4 4 0 0 0-4-4" />
+                <path d="m19 5-1.256 1.256" />
+                <path d="M20 12h2" />
+              </svg>
+            </div>
             <select id="tsd-theme">
-              <option value="os">{i18n.theme_os()}</option>
+              <option value="os">{/* {i18n.theme_os()} theme */}System</option>
               <option value="light">{i18n.theme_light()}</option>
               <option value="dark">{i18n.theme_dark()}</option>
             </select>
@@ -174,14 +194,23 @@ const styles = `
 
   .tsd-theme-toggle {
     display: flex;
-    margin-right: 8px;
+    position: relative;
+    margin-right: 12px;
+    color: var(--color-text-aside);
     
     select {
       border: 1px solid var(--color-background-active);
       border-radius: 4px;
-      padding: 6px 4px;
+      padding: 6px 8px;
+      padding-left: 32px;  /* Space for the icon */
+      font-size: 14px;
       background: transparent;
       transition: background-color 200ms;
+      color: var(--color-text-aside);
+
+      /* for Firefox and Chrome: these are inconsistent */
+      -moz-appearance: none;
+      -webkit-appearance: none;
       
       &:hover {
         background-color: var(--color-background-active);
@@ -217,6 +246,7 @@ const styles = `
   font-size: 14px;
   border-radius: 4px;
   transition: background-color 200ms;
+  color: var(--color-text-aside);
 
   &:hover {
     background-color: var(--color-background-active);
