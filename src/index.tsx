@@ -314,10 +314,11 @@ const styles = `
 }
 
 body {
+  padding: 0;
+  margin: 0;
   & > .container.container-main {
     margin: 0 auto;
     margin-top: var(--dim-header-height);
-    overflow: hidden;
     --dim-container-main-margin-y: 0px;
   }
 }
@@ -432,6 +433,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .col-content {
+  overflow: hidden;
   padding-block: 24px;
 
   & > .tsd-typography {
