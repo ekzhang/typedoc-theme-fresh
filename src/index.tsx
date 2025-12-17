@@ -432,6 +432,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Side columns, menu and page navigation */
 .col-content {
   overflow: hidden;
   padding-block: 24px;
@@ -509,6 +510,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Main content and type */
 .tsd-page-title {
   color: var(--color-contrast-text);
 }
@@ -554,6 +556,16 @@ code.tsd-tag {
 
 .tsd-kind-icon {
   filter: grayscale(0.5) opacity(0.8);
+}
+
+/* Make variable/function/class lists on namespaces 3-column */
+dl.tsd-member-summaries {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+dd.tsd-member-summary {
+  display: none;
 }
 
 /* Accordion icon */
@@ -604,6 +616,10 @@ code.tsd-tag {
   .lg-show {
     display: none !important;
   }
+
+  dl.tsd-member-summaries {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Mobile sizing */
@@ -629,6 +645,10 @@ code.tsd-tag {
   }
   .md-show {
     display: none !important;
+  }
+
+  dl.tsd-member-summaries {
+    grid-template-columns: 1fr;
   }
 }
 `;
