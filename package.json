@@ -1,6 +1,6 @@
 {
   "name": "typedoc-theme-fresh",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A clean, minimalist and well-designed theme for TypeDoc",
   "type": "module",
   "main": "dist/index.js",
